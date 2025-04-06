@@ -30,9 +30,9 @@ st.markdown("""
 # API Key Input
 with st.sidebar:
     st.header("Configuration")
-    openai_api_key = st.text_input("OpenAI API Key", 
-                                 placeholder="sk-......",
-                                 type="password@1234")
+    openai_api_key = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
+
+
     "[Get an OpenAI API key](https://platform.openai.com/account/api-keys)"
 # Input components
 st.subheader("Enter your financial statement")
